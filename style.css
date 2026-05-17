@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1d1e4c;
+}
+
 .container {
   background-color: #e5e5fd;
   min-height: 100vh;
@@ -13,37 +18,44 @@
 .content {
   max-width: 900px;
   margin: 0 auto;
+  padding: 20px;
 }
 
-.img-cont img {
-  width: 300px;
-  height: 320px;
-}
-
+/* Hero Section */
 .top-sec {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
   align-items: flex-end;
-
-}
-
-.top-sec h3 {
-  text-align: end;
-  font-size: 25px;
+  gap: 30px;
+  margin-top: 60px;
+  flex-wrap: wrap;
 }
 
 .img-cont {
   border-radius: 50%;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
-.top-sec h1 {
+.img-cont img {
+  width: 300px;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.title h1 {
   font-weight: bold;
-  color: #1d1e4c;
   font-size: 35px;
 }
 
+.title h3 {
+  text-align: end;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+/* About Section */
 .about {
   margin-top: 50px;
 }
@@ -56,20 +68,24 @@
 
 .about p {
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.6;
   letter-spacing: 1.2px;
   text-align: justify;
+  margin-bottom: 20px;
 }
 
 .hr {
-  margin-bottom: 30px;
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #1d1e4c;
 }
 
-.space {
+.space h2 {
   font-size: 30px;
-
+  margin-bottom: 15px;
 }
 
+/* Bio Section */
 .bio {
   margin: 50px 0;
 }
@@ -80,16 +96,17 @@
 }
 
 .bio ul {
-  margin-left: 100px;
+  margin-left: 40px;
 }
 
 .bio li {
   margin-bottom: 15px;
-  line-height: 30px;
+  line-height: 1.6;
   letter-spacing: 1.2px;
   font-size: 25px;
 }
 
+/* Footer */
 footer {
   margin: 50px 0;
 }
@@ -98,4 +115,97 @@ footer p {
   text-align: end;
   font-size: 20px;
   letter-spacing: 1.8px;
+}
+
+footer a {
+  color: #1d1e4c;
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .container {
+    border-width: 5px;
+  }
+
+  .about h1 {
+    font-size: 45px;
+  }
+
+  .bio h3 {
+    font-size: 32px;
+  }
+
+  .bio li {
+    font-size: 20px;
+  }
+
+  .bio ul {
+    margin-left: 25px;
+  }
+
+  .img-cont img {
+    width: 220px;
+    height: 240px;
+  }
+
+  .title h1 {
+    font-size: 28px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .content {
+    padding: 15px;
+  }
+
+  .top-sec {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .title h3 {
+    text-align: center;
+  }
+
+  .img-cont img {
+    width: 180px;
+    height: 200px;
+  }
+
+  .about h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .about p {
+    font-size: 17px;
+    text-align: left;
+  }
+
+  .bio h3 {
+    font-size: 26px;
+  }
+
+  .bio li {
+    font-size: 18px;
+  }
+
+  .bio ul {
+    margin-left: 20px;
+  }
+
+  .space h2 {
+    font-size: 22px;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 16px;
+  }
 }
